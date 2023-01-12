@@ -24,4 +24,10 @@ public class AgenteController {
     public ResponseEntity<List<Agente>> getAll(){
         return agenteService.getAll();
     }
+
+    @PostMapping("/list")
+    public ResponseEntity<List<Agente>> postListAgente(@RequestBody List<Agente> list){
+        return agenteService.postListAgente(list);
+    }
+
 }
