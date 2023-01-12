@@ -24,6 +24,7 @@ public class MainService {
         try{
             list.forEach(data -> {
                 Agente agente = agenteRepository.save(data.getAgente());
+                System.out.println("Codigo de Agente: "+agente.getCodigo());
                 data.getRegiaoList().forEach(regiao -> {
                     regiao.setAgente(agente);
                 });

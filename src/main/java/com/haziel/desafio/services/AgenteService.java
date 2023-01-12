@@ -16,7 +16,6 @@ public class AgenteService {
 
     public ResponseEntity<Agente> postAgente(Agente agente){
         Agente savedAgent;
-        System.out.println(agente.getCodigo());
         try {
             savedAgent = agenteRepository.save(agente);
             return ResponseEntity.ok(savedAgent);
