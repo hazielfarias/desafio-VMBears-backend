@@ -25,10 +25,8 @@ public class RegiaoService {
     }
 
     public ResponseEntity<List<Regiao>> postListRegiao(List<Regiao> list){
-        List<Regiao> allSaved = new ArrayList<>();
         try{
-            list.forEach(regiao->allSaved.add(regiaoRepository.save(regiao)));
-            return ResponseEntity.ok(allSaved);
+            return ResponseEntity.ok(regiaoRepository.saveAll(list));
         }catch (Exception e){
             System.out.println(e.getMessage());
             return ResponseEntity.badRequest().body(null);

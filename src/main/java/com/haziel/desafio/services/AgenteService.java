@@ -36,10 +36,8 @@ public class AgenteService {
     }
 
     public ResponseEntity<List<Agente>> postListAgente(List<Agente> list){
-        List<Agente> allSaved = new ArrayList<>();
         try{
-            list.forEach(agente->allSaved.add(agenteRepository.save(agente)));
-            return ResponseEntity.ok(allSaved);
+            return ResponseEntity.ok(agenteRepository.saveAll(list));
         }catch (Exception e){
             System.out.println(e.getMessage());
             return ResponseEntity.badRequest().body(null);
