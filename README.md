@@ -1,8 +1,8 @@
-# Desafio VM-Bears Backend
+# Desafio VMBears Backend
 
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-Minimal [Spring Boot](http://projects.spring.io/spring-boot/) desafio app.
+A [Spring Boot](http://projects.spring.io/spring-boot/) app for interview challenge.
 
 ## Requirements
 
